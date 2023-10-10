@@ -3,6 +3,8 @@
 import React from "react";
 import { cn } from "../../utils";
 import { useIntroContext } from "@/app/context/Context";
+import MenuContents from "./MenuContents";
+import MenuButtons from "./MenuButtons";
 
 const MobileMenu = () => {
   const { navOpen } = useIntroContext();
@@ -15,7 +17,8 @@ const MobileMenu = () => {
         }
       )}
     >
-      MobileMenu
+      <MenuContents />
+      <MenuButtons />
     </div>
   );
 };

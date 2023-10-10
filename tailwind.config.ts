@@ -24,6 +24,9 @@ const config: Config = {
       fontSize: {
         norm: "18px",
       },
+      transitionProperty: {
+        height: "height",
+      },
     },
   },
   plugins: [],
