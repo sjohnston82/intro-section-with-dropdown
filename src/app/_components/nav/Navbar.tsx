@@ -11,8 +11,8 @@ const Navbar = () => {
   return (
     <div className="relative w-full">
       <SlideInMenu />
-      <div className="h-16  px-4 flex justify-between items-center">
-        <h1 className="text-3xl font-bold">snap</h1>
+      <div className="h-[68px]  ml-[16px] font-bold flex justify-between items-center">
+        <h1 className="text-[35px] tracking-[-0.02em] font-bold">snap</h1>
         <HamburgerMenu />
       </div>
     </div>

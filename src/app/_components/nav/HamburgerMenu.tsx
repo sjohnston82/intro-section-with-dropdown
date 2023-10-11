@@ -8,10 +8,10 @@ const HamburgerMenu = () => {
   const { navOpen, setNavOpen } = useIntroContext();
 
   const burgerBar =
-    "h-[2px] bg-almost-black w-6 transition ease transform duration-300";
+    "h-[2px] bg-almost-black w-8 transition ease transform duration-300";
   return (
     <div
-      className=" flex flex-col  gap-1 items-center  justify-center  p-2 cursor-pointer"
+      className=" flex flex-col mr-2  gap-[6px] items-center  justify-center  p-2 cursor-pointer"
       onClick={() => setNavOpen(!navOpen)}
     >
       <span
