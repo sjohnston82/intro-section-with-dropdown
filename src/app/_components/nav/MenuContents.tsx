@@ -6,12 +6,13 @@ import CaretUp from "../../../../public/images/icon-arrow-up.svg";
 import Image from "next/image";
 import FeaturesDropdown from "./FeaturesDropdown";
 import { cn } from "@/app/utils";
+import CompanyDropdown from "./CompanyDropdown";
 
 const MenuContents = () => {
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
   return (
-    <div className="flex flex-col gap-4 pt-16 pl-4">
+    <div className="flex flex-col gap-4 pt-16 pl-5">
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
           Features{" "}
@@ -23,24 +24,21 @@ const MenuContents = () => {
             )}
           </span>
         </div>
-          <FeaturesDropdown featuresOpen={featuresOpen} />
+        <FeaturesDropdown featuresOpen={featuresOpen} />
       </div>
-      {/* <div
-        className={cn("transition-[height] duration-700 ease-in h-full", {
-          "h-0": !featuresOpen,
-        })}
-      > */}
-      {/* </div> */}
 
-      <div className="flex items-center gap-2">
-        Company{" "}
-        <span className="" onClick={() => setCompanyOpen(!companyOpen)}>
-          {companyOpen ? (
-            <Image src={CaretUp} alt="Caret Up" />
-          ) : (
-            <Image src={CaretDown} alt="Caret Down" />
-          )}
-        </span>
+      <div className="flex flex-col">
+        <div className="flex items-center gap-2">
+          Company{" "}
+          <span className="" onClick={() => setCompanyOpen(!companyOpen)}>
+            {companyOpen ? (
+              <Image src={CaretUp} alt="Caret Up" />
+            ) : (
+              <Image src={CaretDown} alt="Caret Down" />
+            )}
+          </span>
+        </div>
+        <CompanyDropdown companyOpen={companyOpen} />
       </div>
 
       <p className="cursor pointer">Careers</p>

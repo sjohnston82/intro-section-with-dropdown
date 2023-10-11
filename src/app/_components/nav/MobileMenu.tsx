@@ -13,7 +13,7 @@ const MobileMenu = () => {
       className={cn(
         "w-2/3 bg-almost-white min-h-screen ml-auto absolute right-0 transition-all ease-in duration-200 transform ",
         {
-          "-right-[250px]": !navOpen,
+          "-right-[250px] invisible": !navOpen,
         }
       )}
     >

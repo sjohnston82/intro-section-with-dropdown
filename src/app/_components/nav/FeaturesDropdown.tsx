@@ -17,24 +17,24 @@ const FeaturesDropdown = ({ featuresOpen }: FeaturesDropdownProps) => {
     <div
       className={`${
         featuresOpen ? "max-h-40" : "max-h-0 invisible"
-      }  transition-all duration-500 ease-in-out overflow-hidden`}
+      }  transition-all duration-500 ease-in-out overflow-hidden w-full`}
     >
-      <div className="flex flex-col py-3 px-4 gap-2">
-        <div className="flex gap-1">
+      <div className="flex flex-col py-3 px-5 gap-2">
+        <div className="flex gap-3 items-center">
           <Image src={TodoImage} alt="Todo Image" />
-          <p className="">Todo List</p>
+          <p className="mt-1">Todo List</p>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-3 items-center">
           <Image src={CalendarImage} alt="Calendar Image" />
-          <p className="">Calendar</p>
+          <p className="mt-1">Calendar</p>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-3 items-center">
           <Image src={RemindersImage} alt="Reminders Image" />
-          <p className="">Reminders</p>
+          <p className="mt-1">Reminders</p>
         </div>
-        <div className="flex gap-1">
+        <div className="flex gap-3 items-center">
           <Image src={PlanningImage} alt="Planning Image" />
-          <p className="">Planning</p>
+          <p className="mt-1">Planning</p>
         </div>
       </div>
     </div>
