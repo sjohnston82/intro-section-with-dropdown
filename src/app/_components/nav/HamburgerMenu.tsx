@@ -11,12 +11,12 @@ const HamburgerMenu = () => {
     "h-[2px] bg-almost-black w-8 transition ease transform duration-300";
   return (
     <div
-      className=" flex flex-col mr-2  gap-[6px] items-center  justify-center  p-2 cursor-pointer"
+      className=" flex flex-col mr-2  gap-[6px] items-center z-50  justify-center  p-2 cursor-pointer"
       onClick={() => setNavOpen(!navOpen)}
     >
       <span
         className={cn(`${burgerBar}`, {
-          "rotate-45 translate-y-[7px] w-6": navOpen,
+          "rotate-45 translate-y-[11px] w-6": navOpen,
         })}
       ></span>
       <span

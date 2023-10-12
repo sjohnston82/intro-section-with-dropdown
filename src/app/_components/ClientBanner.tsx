@@ -7,7 +7,7 @@ import Maker from "../../../public/images/client-maker.svg";
 
 const ClientBanner = () => {
   return (
-    <div className="flex mt-[43px] gap-[4px]   items-center">
+    <div className="flex mt-[43px] gap-[4px]   items-center z-0">
       <Image src={Databiz} alt="Databiz" className=" scale-[.72] h-5" />
       <Image src={Audiophile} alt="Audiophile" className="-ml-[2px] scale-[.72]" />
       <Image src={Meet} alt="Meet" className="ml-[1.5px] scale-[.72]" />

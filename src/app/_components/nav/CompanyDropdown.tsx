@@ -11,7 +11,7 @@ const CompanyDropdown = ({ companyOpen }: CompanyDropdownProps) => {
         companyOpen ? "max-h-40" : "max-h-0 invisible"
       }  transition-all duration-500 ease-in-out overflow-hidden w-full`}
     >
-      <div className="flex flex-col  py-3 px-5 gap-2">
+      <div className="flex flex-col  pt-5 pb-[10px] pl-[24px]  gap-[18px]">
         <p className="cursor-pointer">History</p>
         <p className="cursor-pointer">Our Team</p>
         <p className="cursor-pointer">Blog</p>

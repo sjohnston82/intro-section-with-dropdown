@@ -15,7 +15,7 @@ export default function Home() {
           <Image src={HeroMobile} alt="Mobile hero image" className="mt-[7px]" />
           <div className="mt-12">
             <h1 className="text-4xl font-bold text-center tracking-[-0.0125em]">Make remote work</h1>
-            <p className="text-center mx-4 mt-[17px] text-medium-gray tracking-[0.005em] leading-relaxed">
+            <p className="text-center mx-4 mt-[17px] text-medium-gray tracking-[0.005em] leading-relaxed font-[500]">
               Get your team in sync, no matter your location. Streamline
               processes, create team rituals, and watch productivity soar.
             </p>

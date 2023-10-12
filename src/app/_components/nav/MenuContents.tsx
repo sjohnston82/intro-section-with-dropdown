@@ -12,11 +12,11 @@ const MenuContents = () => {
   const [featuresOpen, setFeaturesOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
   return (
-    <div className="flex flex-col gap-4 pt-16 pl-5">
+    <div className="flex flex-col gap-4 pt-[79px] pl-6 z-50">
       <div className="flex flex-col">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4 tracking-wide">
           Features{" "}
-          <span className="" onClick={() => setFeaturesOpen(!featuresOpen)}>
+          <span className="cursor-pointer" onClick={() => setFeaturesOpen(!featuresOpen)}>
             {featuresOpen ? (
               <Image src={CaretUp} alt="Caret Up" />
             ) : (
@@ -28,9 +28,9 @@ const MenuContents = () => {
       </div>
 
       <div className="flex flex-col">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center ml-[1px] gap-4">
           Company{" "}
-          <span className="" onClick={() => setCompanyOpen(!companyOpen)}>
+          <span className="cursor-pointer" onClick={() => setCompanyOpen(!companyOpen)}>
             {companyOpen ? (
               <Image src={CaretUp} alt="Caret Up" />
             ) : (

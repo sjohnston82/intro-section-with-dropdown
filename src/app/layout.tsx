@@ -6,7 +6,7 @@ import { Epilogue } from "next/font/google";
 import Navbar from "./_components/nav/Navbar";
 import ContextProvider from "./context/Context";
 
-const epilogue = Epilogue({ subsets: ["latin"], weight: ["500", "700"] });
+const epilogue = Epilogue({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800"] });
 
 export const metadata: Metadata = {
   title: "Intro Section with Dropdown",

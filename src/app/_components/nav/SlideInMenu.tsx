@@ -8,9 +8,9 @@ import MobileMenu from "./MobileMenu";
 const SlideInMenu = () => {
   const { navOpen, setNavOpen } = useIntroContext();
   return (
-    <div className="relative">
+    <div className="relative z-40">
       <div
-        className={cn("bg-black opacity-50 w-full min-h-screen absolute", {
+        className={cn("bg-black opacity-60  w-full min-h-screen absolute", {
           hidden: !navOpen,
         })}
       ></div>
