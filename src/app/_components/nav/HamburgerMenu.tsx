@@ -16,7 +16,7 @@ const HamburgerMenu = () => {
     >
       <span
         className={cn(`${burgerBar}`, {
-          "rotate-45 translate-y-[11px] w-6": navOpen,
+          "rotate-45 translate-y-[9px] w-8": navOpen,
         })}
       ></span>
       <span
@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
       ></span>
       <span
         className={cn(`${burgerBar}`, {
-          "-rotate-45 -translate-y-[5px] w-6": navOpen,
+          "-rotate-45 -translate-y-[7px] w-8": navOpen,
         })}
       ></span>
     </div>

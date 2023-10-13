@@ -14,9 +14,15 @@ const MenuContents = () => {
   return (
     <div className="flex flex-col gap-4 pt-[79px] pl-6 z-50">
       <div className="flex flex-col">
-        <div className="flex items-center gap-4 tracking-wide">
+        <div
+          onClick={() => setFeaturesOpen(!featuresOpen)}
+          className="flex items-center cursor-pointer gap-4 tracking-[0.015em] hover:font-semibold text-almost-black "
+        >
           Features{" "}
-          <span className="cursor-pointer" onClick={() => setFeaturesOpen(!featuresOpen)}>
+          <span
+            className="cursor-pointer hover:font-semibold"
+            onClick={() => setFeaturesOpen(!featuresOpen)}
+          >
             {featuresOpen ? (
               <Image src={CaretUp} alt="Caret Up" />
             ) : (
@@ -28,11 +34,17 @@ const MenuContents = () => {
       </div>
 
       <div className="flex flex-col">
-        <div className="flex items-center ml-[1px] gap-4">
+        <div
+          className="flex items-center hover:font-semibold cursor-pointer ml-[1px] gap-4 text-almost-black tracking-[0.015em]"
+          onClick={() => setCompanyOpen(!companyOpen)}
+        >
           Company{" "}
-          <span className="cursor-pointer" onClick={() => setCompanyOpen(!companyOpen)}>
+          <span
+            className="cursor-pointer"
+            onClick={() => setCompanyOpen(!companyOpen)}
+          >
             {companyOpen ? (
-              <Image src={CaretUp} alt="Caret Up" />
+              <Image src={CaretUp} alt="Caret Up" className="hover:scale-115" />
             ) : (
               <Image src={CaretDown} alt="Caret Down" />
             )}
@@ -41,8 +53,12 @@ const MenuContents = () => {
         <CompanyDropdown companyOpen={companyOpen} />
       </div>
 
-      <p className="cursor pointer">Careers</p>
-      <p className="cursor pointer">About</p>
+      <p className=" cursor pointer text-almost-black tracking-[0.015em] hover:font-semibold cursor-pointer">
+        Careers
+      </p>
+      <p className="cursor pointer text-almost-black mt-[2px] tracking-[0.015em] hover:font-semibold cursor-pointer">
+        About
+      </p>
     </div>
   );
 };

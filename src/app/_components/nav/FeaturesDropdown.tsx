@@ -22,7 +22,9 @@ const FeaturesDropdown = ({ featuresOpen }: FeaturesDropdownProps) => {
       <div className="flex flex-col pt-6 pb-[10px] pl-6  gap-4 w-full">
         <div className="flex gap-4 items-center w-full">
           <Image src={TodoImage} alt="Todo Image" className="h-5 w-[18px]" />
-          <p className="mt-[2px] tracking-[0.01em]">Todo List</p>
+          <p className="mt-[2px] tracking-[0.01em] hover:font-semibold cursor-pointer">
+            Todo List
+          </p>
         </div>
         <div className="flex gap-4 items-center w-full">
           <Image
@@ -30,7 +32,9 @@ const FeaturesDropdown = ({ featuresOpen }: FeaturesDropdownProps) => {
             alt="Calendar Image"
             className="h-5 w-5 -mr-[1px]"
           />
-          <p className="mt-[2px] -ml-[2px]">Calendar</p>
+          <p className="mt-[2px] -ml-[2px] hover:font-semibold cursor-pointer">
+            Calendar
+          </p>
         </div>
         <div className="flex gap-4 items-center w-full">
           <Image
@@ -38,7 +42,9 @@ const FeaturesDropdown = ({ featuresOpen }: FeaturesDropdownProps) => {
             alt="Reminders Image"
             className="h-5  w-[18px]"
           />
-          <p className="mt-[2px]">Reminders</p>
+          <p className="mt-[2px] hover:font-semibold cursor-pointer">
+            Reminders
+          </p>
         </div>
         <div className="flex gap-4 items-center w-full">
           <Image
@@ -46,7 +52,9 @@ const FeaturesDropdown = ({ featuresOpen }: FeaturesDropdownProps) => {
             alt="Planning Image"
             className="h-5 w-5 -mr-[2px]"
           />
-          <p className="mt-[2px] ">Planning</p>
+          <p className="mt-[2px] hover:font-semibold cursor-pointer">
+            Planning
+          </p>
         </div>
       </div>
     </div>
