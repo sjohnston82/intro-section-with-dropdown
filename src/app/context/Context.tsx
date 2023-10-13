@@ -4,7 +4,9 @@ import React, {
   createContext,
   Dispatch,
   SetStateAction,
+  useEffect
 } from "react";
+import { getWindowSize } from "../utils";
 
 type ContextType = {
   navOpen: boolean;
@@ -19,17 +21,29 @@ type ChildrenProps = {
   children: JSX.Element | JSX.Element[];
 };
 
-function getWindowSize() {
+// function getWindowSize() {
   
-  const { innerWidth, innerHeight } = window;
-  return { innerWidth, innerHeight };
-}
+//   const { innerWidth, innerHeight } = window;
+//   return { innerWidth, innerHeight };
+// }
 
 const Context = createContext<ContextType | null>(null);
 
 const ContextProvider = ({ children }: ChildrenProps) => {
   const [navOpen, setNavOpen] = useState(false);
   const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <Context.Provider

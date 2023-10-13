@@ -2,7 +2,7 @@ import React from "react";
 
 const MenuButtons = () => {
   return (
-    <div className="mt-[30px] flex flex-col justify-center gap-[13px] ml-6 mr-[20px] ">
+    <div className="mt-[30px] flex flex-col justify-center gap-[13px] ml-6 mr-[20px] lg:flex-row lg:items-center lg:m-0 ">
       <p className="text-center cursor-pointer -ml-[2px] text-almost-black text-[15px] hover:font-semibold tracking-tight">
         Login
       </p>

@@ -17,7 +17,7 @@ const FeaturesDropdown = ({ featuresOpen }: FeaturesDropdownProps) => {
     <div
       className={`${
         featuresOpen ? "max-h-48" : "max-h-0 invisible"
-      }  transition-all duration-500 ease-in-out overflow-hidden w-full`}
+      }  transition-all duration-500 ease-in-out overflow-hidden w-full lg:transition-none`}
     >
       <div className="flex flex-col pt-6 pb-[10px] pl-6  gap-4 w-full">
         <div className="flex gap-4 items-center w-full">
