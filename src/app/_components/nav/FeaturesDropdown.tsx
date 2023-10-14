@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import TodoImage from "../../../../public/images/icon-todo.svg";
 import CalendarImage from "../../../../public/images/icon-calendar.svg";
 import RemindersImage from "../../../../public/images/icon-reminders.svg";
 import PlanningImage from "../../../../public/images/icon-planning.svg";
 import Image from "next/image";
-import { cn } from "@/app/utils";
+
 
 type FeaturesDropdownProps = {
   featuresOpen: boolean;

@@ -21,12 +21,6 @@ type ChildrenProps = {
   children: JSX.Element | JSX.Element[];
 };
 
-// function getWindowSize() {
-  
-//   const { innerWidth, innerHeight } = window;
-//   return { innerWidth, innerHeight };
-// }
-
 const Context = createContext<ContextType | null>(null);
 
 const ContextProvider = ({ children }: ChildrenProps) => {

@@ -1,10 +1,6 @@
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
-import Navbar from "./_components/nav/Navbar";
-import ContextProvider from "./context/Context";
-import Head from "next/head";
 import { Providers } from "./Providers";
 
 const epilogue = Epilogue({

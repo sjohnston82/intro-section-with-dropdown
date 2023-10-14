@@ -5,10 +5,10 @@ import CaretDown from "../../../../public/images/icon-arrow-down.svg";
 import CaretUp from "../../../../public/images/icon-arrow-up.svg";
 import Image from "next/image";
 import FeaturesDropdown from "./FeaturesDropdown";
-import { cn } from "@/app/utils";
 import CompanyDropdown from "./CompanyDropdown";
 import { useIntroContext } from "@/app/context/Context";
 import FeaturesDropDownDesktop from "./FeaturesDropDownDesktop";
+import CompanyDropdownDesktop from "./CompanyDropdownDesktop";
 
 const MenuContents = () => {
   const [featuresOpen, setFeaturesOpen] = useState(false);
@@ -19,7 +19,7 @@ const MenuContents = () => {
       <div className="lg:flex lg:h-full lg:items-center lg:justify-center">
         <div
           onClick={() => setFeaturesOpen(!featuresOpen)}
-          className="flex cursor-pointer items-center gap-4 tracking-[0.015em] text-almost-black hover:font-semibold lg:items-center lg:gap-2 lg:text-[15px] lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray "
+          className="flex cursor-pointer items-center gap-4 tracking-[0.015em] text-almost-black hover:font-semibold lg:items-center lg:gap-2 lg:text-[15px] lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray lg:hover:text-almost-black "
         >
           Features{" "}
           <span
@@ -42,7 +42,7 @@ const MenuContents = () => {
 
       <div className="flex flex-col">
         <div
-          className="ml-[1px] flex cursor-pointer items-center gap-4 tracking-[0.015em] text-almost-black hover:font-semibold lg:gap-2 lg:text-[15px] lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray"
+          className="ml-[1px] flex cursor-pointer items-center gap-4 tracking-[0.015em] text-almost-black hover:font-semibold lg:gap-2 lg:text-[15px] lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray lg:hover:text-almost-black"
           onClick={() => setCompanyOpen(!companyOpen)}
         >
           Company{" "}
@@ -57,13 +57,17 @@ const MenuContents = () => {
             )}
           </span>
         </div>
-        <CompanyDropdown companyOpen={companyOpen} />
+        {windowSize.innerWidth < 1024 ? (
+          <CompanyDropdown companyOpen={companyOpen} />
+        ) : (
+          <CompanyDropdownDesktop companyOpen={companyOpen} />
+        )}
       </div>
 
-      <p className="cursor-pointer tracking-[0.015em] text-almost-black hover:font-semibold lg:-ml-4 lg:text-[15px] lg:font-[500]  lg:tracking-[-0.025em] lg:text-medium-gray">
+      <p className="cursor-pointer tracking-[0.015em] text-almost-black hover:font-semibold  lg:text-[15px] lg:font-[500]  lg:tracking-[-0.025em] lg:text-medium-gray lg:hover:text-almost-black">
         Careers
       </p>
-      <p className="mt-[2px] cursor-pointer tracking-[0.015em] text-almost-black hover:font-semibold lg:ml-[2px] lg:mt-0  lg:text-[15px]  lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray">
+      <p className="mt-[2px] cursor-pointer tracking-[0.015em] text-almost-black hover:font-semibold lg:ml-[2px] lg:mt-0  lg:text-[15px]  lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray lg:hover:text-almost-black">
         About
       </p>
     </div>
