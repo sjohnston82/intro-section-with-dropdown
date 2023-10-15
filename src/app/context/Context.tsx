@@ -11,6 +11,10 @@ import { getWindowSize } from "../utils";
 type ContextType = {
   navOpen: boolean;
   setNavOpen: Dispatch<SetStateAction<boolean>>;
+  featuresOpen: boolean;
+  setFeaturesOpen: Dispatch<SetStateAction<boolean>>;
+  companyOpen: boolean;
+  setCompanyOpen: Dispatch<SetStateAction<boolean>>;
   windowSize: { innerWidth: number; innerHeight: number };
   setWindowSize: Dispatch<
     SetStateAction<{ innerWidth: number; innerHeight: number }>
@@ -26,6 +30,8 @@ const Context = createContext<ContextType | null>(null);
 const ContextProvider = ({ children }: ChildrenProps) => {
   const [navOpen, setNavOpen] = useState(false);
   const [windowSize, setWindowSize] = useState(getWindowSize());
+  const [featuresOpen, setFeaturesOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
 
   useEffect(() => {
     function handleWindowResize() {
@@ -46,6 +52,10 @@ const ContextProvider = ({ children }: ChildrenProps) => {
         setNavOpen,
         windowSize,
         setWindowSize,
+        featuresOpen,
+        setFeaturesOpen,
+        companyOpen,
+        setCompanyOpen
       }}
     >
       {children}

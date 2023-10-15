@@ -18,7 +18,7 @@ const Navbar = () => {
     isClient && <div className="relative w-full " >
       {windowSize.innerWidth < 1440 && <SlideInMenu />}
       <div className="ml-[17px] flex h-[68px]  items-center justify-between font-bold lg:ml-10 lg:h-[84px]">
-        <h1 className="text-[35px] font-bold tracking-[-0.025em] lg:tracking-[-0.01em]">
+        <h1 className="text-[35px] font-bold tracking-[-0.025em] lg:tracking-[-0.01em] text-almost-black">
           snap
         </h1>
         {windowSize.innerWidth < 1024 ? (

@@ -11,11 +11,15 @@ import FeaturesDropDownDesktop from "./FeaturesDropDownDesktop";
 import CompanyDropdownDesktop from "./CompanyDropdownDesktop";
 
 const MenuContents = () => {
-  const [featuresOpen, setFeaturesOpen] = useState(false);
-  const [companyOpen, setCompanyOpen] = useState(false);
-  const { windowSize } = useIntroContext();
+  const {
+    windowSize,
+    featuresOpen,
+    setFeaturesOpen,
+    companyOpen,
+    setCompanyOpen,
+  } = useIntroContext();
   return (
-    <div className="z-50 flex flex-col gap-4 pl-6 pt-[79px] lg:my-auto lg:ml-[7px] lg:mt-[10px] lg:h-full lg:w-full lg:flex-row lg:items-center lg:gap-9 lg:pl-0 lg:pt-0">
+    <div className="z-50 flex flex-col gap-4 pl-6 pt-[79px] lg:my-auto lg:ml-[7px] lg:mt-[10px] lg:h-full lg:w-full lg:max-w-[375px] lg:flex-row lg:items-center lg:gap-9 lg:pl-0 lg:pt-0">
       <div className="lg:flex lg:h-full lg:items-center lg:justify-center">
         <div
           onClick={() => setFeaturesOpen(!featuresOpen)}
@@ -34,9 +38,9 @@ const MenuContents = () => {
           </span>
         </div>
         {windowSize.innerWidth < 1024 ? (
-          <FeaturesDropdown featuresOpen={featuresOpen} />
+          <FeaturesDropdown />
         ) : (
-          <FeaturesDropDownDesktop featuresOpen={featuresOpen} />
+          <FeaturesDropDownDesktop />
         )}
       </div>
 
@@ -58,9 +62,9 @@ const MenuContents = () => {
           </span>
         </div>
         {windowSize.innerWidth < 1024 ? (
-          <CompanyDropdown companyOpen={companyOpen} />
+          <CompanyDropdown />
         ) : (
-          <CompanyDropdownDesktop companyOpen={companyOpen} />
+          <CompanyDropdownDesktop />
         )}
       </div>
 
