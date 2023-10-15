@@ -4,7 +4,7 @@ import React, {
   createContext,
   Dispatch,
   SetStateAction,
-  useEffect
+  useEffect,
 } from "react";
 import { getWindowSize } from "../utils";
 
@@ -19,6 +19,7 @@ type ContextType = {
   setWindowSize: Dispatch<
     SetStateAction<{ innerWidth: number; innerHeight: number }>
   >;
+  closeMenus: () => void;
 };
 
 type ChildrenProps = {
@@ -45,6 +46,15 @@ const ContextProvider = ({ children }: ChildrenProps) => {
     };
   }, []);
 
+  const closeMenus = () => {
+    if (companyOpen) {
+      setCompanyOpen(false);
+    }
+    if (featuresOpen) {
+      setFeaturesOpen(false);
+    }
+  };
+
   return (
     <Context.Provider
       value={{
@@ -55,7 +65,8 @@ const ContextProvider = ({ children }: ChildrenProps) => {
         featuresOpen,
         setFeaturesOpen,
         companyOpen,
-        setCompanyOpen
+        setCompanyOpen,
+        closeMenus,
       }}
     >
       {children}

@@ -8,11 +8,8 @@ import PlanningImage from "../../../../public/images/icon-planning.svg";
 import Image from "next/image";
 import { useIntroContext } from "@/app/context/Context";
 
-
-
 const FeaturesDropdown = () => {
-
-  const { featuresOpen } = useIntroContext();
+  const { featuresOpen, closeMenus } = useIntroContext();
 
   return (
     <div
@@ -21,13 +18,13 @@ const FeaturesDropdown = () => {
       }  w-full overflow-hidden transition-all duration-500 ease-in-out lg:transition-none`}
     >
       <div className="flex w-full flex-col gap-4 pb-[10px]  pl-6 pt-6">
-        <div className="flex w-full items-center gap-4">
+        <div className="flex w-full items-center gap-4" onClick={closeMenus}>
           <Image src={TodoImage} alt="Todo Image" className="h-5 w-[18px]" />
           <p className="mt-[2px] cursor-pointer tracking-[0.01em] text-almost-black hover:font-semibold">
             Todo List
           </p>
         </div>
-        <div className="flex w-full items-center gap-4">
+        <div className="flex w-full items-center gap-4" onClick={closeMenus}>
           <Image
             src={CalendarImage}
             alt="Calendar Image"
@@ -37,7 +34,7 @@ const FeaturesDropdown = () => {
             Calendar
           </p>
         </div>
-        <div className="flex w-full items-center gap-4">
+        <div className="flex w-full items-center gap-4" onClick={closeMenus}>
           <Image
             src={RemindersImage}
             alt="Reminders Image"
@@ -47,7 +44,7 @@ const FeaturesDropdown = () => {
             Reminders
           </p>
         </div>
-        <div className="flex w-full items-center gap-4">
+        <div className="flex w-full items-center gap-4" onClick={closeMenus}>
           <Image
             src={PlanningImage}
             alt="Planning Image"

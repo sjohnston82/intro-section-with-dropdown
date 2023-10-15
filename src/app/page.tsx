@@ -14,25 +14,21 @@ export default function Home() {
     setCompanyOpen,
     featuresOpen,
     setFeaturesOpen,
+    closeMenus
   } = useIntroContext();
 
-  const closeMenus = () => {
-    if (companyOpen) {
-      setCompanyOpen(false);
-    }
-    if (featuresOpen) {
-      setFeaturesOpen(false);
-    }
-  };
 
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-almost-black" suppressHydrationWarning>
-      <main
-        onClick={closeMenus}
-        className="max-w-screen h-[780px] w-[375px] overflow-hidden bg-almost-white   lg:h-[900px] lg:w-[1440px]"
-      >
+    <div
+      className="flex min-h-screen w-full items-center justify-center bg-almost-black"
+      suppressHydrationWarning
+    >
+      <main className="max-w-screen h-[780px] w-[375px] overflow-hidden bg-almost-white   lg:h-[900px] lg:w-[1440px]">
         <Navbar />
-        <div className="lg:flex lg:flex-row-reverse lg:gap-6">
+        <div
+          onClick={closeMenus}
+          className="lg:flex lg:flex-row-reverse lg:gap-6"
+        >
           <Image
             src={windowSize.innerWidth < 1024 ? HeroMobile : HeroDesktop}
             alt="Mobile hero image"

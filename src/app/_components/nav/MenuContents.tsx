@@ -18,18 +18,30 @@ const MenuContents = () => {
     companyOpen,
     setCompanyOpen,
   } = useIntroContext();
+
+  const openFeaturesMenu = () => {
+    if (companyOpen && windowSize.innerWidth > 1023) {
+      setCompanyOpen(false);
+    }
+    setFeaturesOpen(!featuresOpen);
+  };
+
+  const openCompanyMenu = () => {
+    if (featuresOpen && windowSize.innerWidth > 1023) {
+      setFeaturesOpen(false);
+    }
+    setCompanyOpen(!companyOpen);
+  };
+
   return (
     <div className="z-50 flex flex-col gap-4 pl-6 pt-[79px] lg:my-auto lg:ml-[7px] lg:mt-[10px] lg:h-full lg:w-full lg:max-w-[375px] lg:flex-row lg:items-center lg:gap-9 lg:pl-0 lg:pt-0">
       <div className="lg:flex lg:h-full lg:items-center lg:justify-center">
         <div
-          onClick={() => setFeaturesOpen(!featuresOpen)}
+          onClick={() => openFeaturesMenu()}
           className="flex cursor-pointer items-center gap-4 tracking-[0.015em] text-almost-black hover:font-semibold lg:items-center lg:gap-2 lg:text-[15px] lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray lg:hover:text-almost-black "
         >
           Features{" "}
-          <span
-            className="cursor-pointer hover:font-semibold"
-            onClick={() => setFeaturesOpen(!featuresOpen)}
-          >
+          <span className="cursor-pointer hover:font-semibold">
             {featuresOpen ? (
               <Image src={CaretUp} alt="Caret Up" />
             ) : (
@@ -47,13 +59,10 @@ const MenuContents = () => {
       <div className="flex flex-col">
         <div
           className="ml-[1px] flex cursor-pointer items-center gap-4 tracking-[0.015em] text-almost-black hover:font-semibold lg:gap-2 lg:text-[15px] lg:font-[500] lg:tracking-[-0.025em] lg:text-medium-gray lg:hover:text-almost-black"
-          onClick={() => setCompanyOpen(!companyOpen)}
+          onClick={() => openCompanyMenu()}
         >
           Company{" "}
-          <span
-            className="cursor-pointer"
-            onClick={() => setCompanyOpen(!companyOpen)}
-          >
+          <span className="cursor-pointer">
             {companyOpen ? (
               <Image src={CaretUp} alt="Caret Up" className="hover:scale-115" />
             ) : (

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -8,22 +8,29 @@ import RemindersImage from "../../../../public/images/icon-reminders.svg";
 import PlanningImage from "../../../../public/images/icon-planning.svg";
 import { useIntroContext } from "@/app/context/Context";
 
-
 const FeaturesDropDownDesktop = () => {
+  const { featuresOpen, companyOpen, setCompanyOpen, closeMenus } =
+    useIntroContext();
 
-  const { featuresOpen } = useIntroContext();
+
 
   return (
     featuresOpen && (
       <div className="absolute left-[112px] top-[70px] max-w-[156px] rounded-xl bg-white p-3 shadow-[0_0_25px_-12px_#696969]">
         <div className="flex w-full flex-col gap-3 px-[16px]  py-[7px] ">
-          <div className="flex w-full items-center gap-[14px]">
+          <div
+            className="flex w-full items-center gap-[14px]"
+            onClick={closeMenus}
+          >
             <Image src={TodoImage} alt="Todo Image" className="h-4 w-[14px]" />
             <p className="mt-[2px] cursor-pointer text-[14px] font-[400] tracking-[0.01em] text-almost-black hover:font-semibold">
               Todo List
             </p>
           </div>
-          <div className="flex w-full items-center gap-[14px]">
+          <div
+            className="flex w-full items-center gap-[14px]"
+            onClick={closeMenus}
+          >
             <Image
               src={CalendarImage}
               alt="Calendar Image"
@@ -33,7 +40,10 @@ const FeaturesDropDownDesktop = () => {
               Calendar
             </p>
           </div>
-          <div className="flex w-full items-center gap-[14px]">
+          <div
+            className="flex w-full items-center gap-[14px]"
+            onClick={closeMenus}
+          >
             <Image
               src={RemindersImage}
               alt="Reminders Image"
@@ -43,7 +53,10 @@ const FeaturesDropDownDesktop = () => {
               Reminders
             </p>
           </div>
-          <div className="flex w-full items-center gap-[14px]">
+          <div
+            className="flex w-full items-center gap-[14px]"
+            onClick={closeMenus}
+          >
             <Image
               src={PlanningImage}
               alt="Planning Image"
